@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 
 http.listen(80);
 
-app.use('/', express.static(path.resolve('public')));
+app.use(express.static('public'));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });
