@@ -1,0 +1,2 @@
+# Kodaira_boardGame_homepage
+小平ボードゲーム交流会のホームページのソースコード管理
