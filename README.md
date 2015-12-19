@@ -7,3 +7,4 @@ boardgame フォルダで基本作業
 cd boardgame
 node app.js
 
+大杉がんばり中
