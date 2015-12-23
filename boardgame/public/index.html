@@ -1,18 +1,46 @@
-<!doctype html>
-<html>
-  <head>
-    <title>テストページ</title>
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
-<img src='images/like.jpg' onclick="SNS()" width='20%' height='20%' id='likeIt'>
-    <script type="text/javascript">
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
 
-    function SNS(){
-      alert('よくねーよ');
-    }
+    <link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components-blue-basic-theme.css">
+
+    <script src="components/monaca-onsenui/angular/angular.js"></script>
+    <script src="components/monaca-onsenui/js/onsenui.js"></script>
+    
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/active_lists.css">
+    <script>
+        var app=ons.bootstrap();
     </script>
+    <script src="js/controller/activeController.js"></script>
+    <script src="js/controller/scheduleController.js"></script>
+</head>
+<body>
+    <ons-tabbar var="tabbar">
+        <ons-tabbar-item
+            icon="home"
+            label="Home"
+            page="home.html"
+            active="true"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="calendar"
+            label="Schedule"
+            page="schedule.html"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="pencil-square-o"
+            label="Activity"
+            page="activity.html"></ons-tabbar-item>
+        <ons-tabbar-item
+            icon="gear"
+            label="Settings"
+            page="page3.html"></ons-tabbar-item>
+    </ons-tabbar>
 
-
-  </body>
+</body>
 </html>
