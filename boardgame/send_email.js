@@ -24,7 +24,7 @@ function send_email(){
     {
          raw: base64EncodedEmail
     }
-  }
+  },
     function(err, results){
         console.log(err);
         console.log(results);
