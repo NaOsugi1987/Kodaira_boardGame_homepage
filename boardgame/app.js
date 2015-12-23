@@ -16,5 +16,6 @@ app.get('/mail', function (req, res) {
 });
 
 app.get('/job/GitHubPushReceiver/buildWithParameters', function (req, res) {
+	res.sendFile(__dirname + '/public/index.html');
 	console.log(req);
 });
