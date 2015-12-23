@@ -25,7 +25,10 @@ function send_email(){
          raw: base64EncodedEmail
     }
   }
-    function(err, results){});
+    function(err, results){
+        console.log(err);
+        console.log(results);
+    });
 };
 
 send_email();
