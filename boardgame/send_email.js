@@ -2,6 +2,14 @@ function send_email(){
   	var google = require('googleapis');
     var gmailClass = google.gmail('v1');
 
+    var CLIENT_ID = '1050649807688-hpcfc60ttramflanrrklkljc29uimhmn.apps.googleusercontent.com',
+    CLIENT_SECRET = 'nG6uqFZ0OZF31DbcXYNv59Cx',
+    REDIRECT_URL = 'urn:ietf:wg:oauth:2.0:oob',
+
+    var auth = new googleAuth();
+    var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
+
+
     var email_lines = [];
 
     email_lines.push("From: \"Naoya Osugi\" <7842wombat3994@gmail.com>");
@@ -18,7 +26,7 @@ function send_email(){
     var base64EncodedEmail = new Buffer(email).toString('base64');
 
     gmailClass.users.messages.send({
-    auth: OAuth2Client,
+    auth: oauth2Client,
     userId: "1050649807688-hpcfc60ttramflanrrklkljc29uimhmn.apps.googleusercontent.com",
     resource: 
     {
