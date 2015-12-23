@@ -4,7 +4,7 @@
 boardgame フォルダで基本作業
 
 現在の状態：80 portでexpressのdefaultのやつにアクセスできるが、エラーがでる
-cd boardgame
-node app.js
 
-大杉がんばり中
+## deploy 手順
+### 基本方針
+git のmasterに変更があったら、本番deployまで自動化
