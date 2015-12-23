@@ -1,7 +1,7 @@
 (function(){
   if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/iPhone|iPad|iPod/i))) {
     if (typeof location.href === "string") {
-      var relativePath = location.href.split("/www")[1];
+      var relativePath = location.href.split("/")[1];
       var paths = relativePath.split("/");
       var cordovaJsUrl = ""; 
       for (var i = 0; i < paths.length - 2; i++) {
