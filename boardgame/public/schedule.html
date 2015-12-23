@@ -1,0 +1,28 @@
+<ons-navigator title="Navigator" var="scheduleNav">
+<div ng-controller="ScheduleCtrl">
+<ons-toolbar>
+    <div class="center">
+        Schedule
+    </div>
+</ons-toolbar>
+<ons-list class="plan-list">
+    <ons-list-item  modifier="chevron"
+                    class="plan" 
+                    ng-repeat="shc in eventDates"
+                    ng-click="scheduleNav.pushPage(shc.htmls, { animation : 'slide' } )">
+        <ons-row>
+            <ons-col width="80px" class="plan-left">
+                <div class="plan-date">{{shc.date}}</div>
+                <div class="plan-info">{{shc.hour}}</div>
+            </ons-col>
+            <ons-col width="6px" class="plan-center" ng-style="{backgroundColor: '#3399ff'}">
+            </ons-col>
+            <ons-col class="plan-right">
+                <div class="plan-name">{{shc.name}}</div>
+                <div class="plan-info">
+                    <ons-icon icon="fa-map-marker"></ons-icon>{{shc.place}}
+                </div>
+            </ons-col>
+        </ons-row>
+    </ons-list-item>
+</ons-list>
