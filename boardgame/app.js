@@ -18,4 +18,3 @@ app.get('/mail', function (req, res) {
 app.get('/job/GitHubPushReceiver/buildWithParameters', function (req, res) {
 	console.log(req);
 });
-
