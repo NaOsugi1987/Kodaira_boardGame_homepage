@@ -1,0 +1,104 @@
+#logo {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #dddddd;
+}
+
+.title-image {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+#topic-container {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.topic {
+    color: #000;
+
+    display: block;
+    text-align: center;
+
+    border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
+    margin-bottom: 10px;
+}
+
+.topic h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 36px;
+}
+
+.topic p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+#topicA {
+    background-color: #dfa3a0;
+}
+
+#topicB {
+    background-color: #a1bedc;
+}
+
+#topicC {
+    background-color: #b7c497;
+}
+
+#topicD {
+    background-color: #fae9a0;
+}
+
+
+
+/*
+ * ブラウザサイズ別の挙動
+ */
+
+/* 599px以下 */
+@media (min-width: 599px) {
+
+}
+
+
+/* 768px以下 */
+@media (min-width: 768px) {
+    #topic-container:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #topicA, #topicB, #topicC {
+        width: 23.5%;
+        margin-right: 2%;
+        float: left;
+    }
+
+    #topicD {
+        width: 23.5%;
+        float: left;
+    }
+}
+
+
+/* 1190px以上 */
+@media (min-width: 1190px) {
+
+    /* 全体の横幅を固定 */
+    #title {
+        width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
