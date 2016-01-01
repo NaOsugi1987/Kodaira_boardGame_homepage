@@ -1,15 +1,20 @@
-#logo {
-    padding-left: 15px;
-    padding-right: 15px;
+#header {
     margin-bottom: 20px;
     border-bottom: solid 1px #dddddd;
 }
 
-.title-image {
+#logo {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex-image {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
 }
+
+
 
 #topic-container {
     padding-top: 20px;
@@ -17,25 +22,20 @@
     padding-right: 15px;
 }
 
-
-
 .topic {
     color: #000;
 
     display: block;
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+
 
     border-radius: 10px;        /* CSS3草案 */
     -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
     -moz-border-radius: 10px;   /* Firefox用 */
-    margin-bottom: 10px;
 
     font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.topic {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .topic .topic-title {
@@ -99,8 +99,8 @@
 @media (min-width: 1190px) {
 
     /* 全体の横幅を固定 */
-    #title {
-        width: 1140px;
+    #header, #content {
+        width: 1120px;
         margin-left: auto;
         margin-right: auto;
     }
