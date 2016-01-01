@@ -29,17 +29,20 @@
     -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
     -moz-border-radius: 10px;   /* Firefox用 */
     margin-bottom: 10px;
+
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.topic h1 {
+.topic {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.topic .topic-title {
     font-size: 36px;
 }
 
 .topic p {
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 17px;
 }
 
