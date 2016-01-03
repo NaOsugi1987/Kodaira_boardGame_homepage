@@ -17,7 +17,7 @@
 
 
 #topic-container {
-    padding-top: 20px;
+    padding-top: 2%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -39,11 +39,15 @@
 }
 
 .topic .topic-title {
-    font-size: 36px;
+    font-size: 1.2em;
+    border-bottom: 0.1em solid #A0A0A0;
+    margin-top: 2%;
 }
 
 .topic p {
-    font-size: 17px;
+    font-size: 0.8em;
+    margin-right: 4%;
+    margin-left: 4%;
 }
 
 #topicA {
@@ -62,7 +66,18 @@
     background-color: #fae9a0;
 }
 
+/*
+* スポンサー表示
+*/
+#sponsor img{
+    height: 40px;
+    width: auto; 
+    float: right;
+}
 
+p{
+    text-align: center;
+}
 
 /*
  * ブラウザサイズ別の挙動
