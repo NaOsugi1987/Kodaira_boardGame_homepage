@@ -1,0 +1,122 @@
+#header {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #dddddd;
+}
+
+#logo {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex-image {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+
+#topic-container {
+    padding-top: 2%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.topic {
+    color: #000;
+
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+
+    border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
+
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.topic .topic-title {
+    font-size: 1.2em;
+    border-bottom: 0.1em solid #A0A0A0;
+    margin-top: 2%;
+}
+
+.topic p {
+    font-size: 0.8em;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+#topicA {
+    background-color: #dfa3a0;
+}
+
+#topicB {
+    background-color: #a1bedc;
+}
+
+#topicC {
+    background-color: #b7c497;
+}
+
+#topicD {
+    background-color: #fae9a0;
+}
+
+/*
+* スポンサー表示
+*/
+#sponsor img{
+    height: 40px;
+    width: auto; 
+    float: right;
+}
+
+p{
+    text-align: center;
+}
+
+/*
+ * ブラウザサイズ別の挙動
+ */
+
+/* 599px以下 */
+@media (min-width: 599px) {
+
+}
+
+
+/* 768px以下 */
+@media (min-width: 768px) {
+    #topic-container:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #topicA, #topicB, #topicC {
+        width: 23.5%;
+        margin-right: 2%;
+        float: left;
+    }
+
+    #topicD {
+        width: 23.5%;
+        float: left;
+    }
+}
+
+
+/* 1190px以上 */
+@media (min-width: 1190px) {
+
+    /* 全体の横幅を固定 */
+    #header, #content {
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
