@@ -1,3 +1,25 @@
+<ons-navigator title="Navigator" var="faqNav">
+<div ng-controller="FaqCtrl">
 <ons-toolbar>
-    <div class="center">Page3</div>
+    <div class="left"><ons-back-button>戻る</ons-back-button></div>
+    <div class="center">よくある質問</div>
 </ons-toolbar>
+
+<ons-list>
+    <ons-list-item  modifier="chevron" 
+                    class="list-item-container" 
+                    ng-repeat="faq in contents"
+                    >
+    <ons-row >
+        <ons-col>
+            <div class="name">
+                {{faq.question}}
+            </div>
+            <div class="desc">
+                {{faq.answer}}
+            </div>
+        </ons-col>
+        <ons-col width="40px"></ons-col>
+    </ons-row>
+</ons-list>
+
