@@ -1,4 +1,5 @@
 CREATE TABLE person (
     id IDENTITY
-    ,name TEXT NOT NULL
+    ,name NVARCHAR UNIQUE NOT NULL
+    ,encrypted_password CHAR(60) NOT NULL
 );

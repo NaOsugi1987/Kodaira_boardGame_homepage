@@ -18,7 +18,7 @@ class PrivateController(private val personService: PersonService) {
     @GetMapping("/private/add_person")
     fun addPerson(model: Model,
                   @RequestParam("name") name: String = ""): String {
-        val newPerson = personService.addPerson(name)
+        val newPerson = personService.addPerson(name, "test")
 
         logger.info("name:$name,,newPerson:$newPerson")
 
