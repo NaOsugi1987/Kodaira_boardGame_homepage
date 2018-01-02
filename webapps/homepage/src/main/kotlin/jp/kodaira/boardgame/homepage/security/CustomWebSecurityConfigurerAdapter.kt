@@ -12,7 +12,16 @@ class CustomWebSecurityConfigurerAdapter : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         // private以下のみ認証を要求しておく
         http.authorizeRequests()
-                .antMatchers("/private/**").authenticated()
+                .mvcMatchers("/private/**").authenticated()
                 .anyRequest().permitAll()
+
+        // ログイン設定
+        http.formLogin()
+                .loginProcessingUrl("/manage/form_login")
+                .loginPage("/login.html")
+                .failureHandler(CustomAuthenticationFailureHandler())
+                .defaultSuccessUrl("/index.html")
+                .usernameParameter("name")
+                .passwordParameter("encrypted_password")
     }
 }
