@@ -13,7 +13,7 @@ class HomepageApplicationTests {
 	@Test
 	fun contextLoads() {
         val test = "start"
-        Assert.assertEquals("ok", "start",test)
+        Assert.assertEquals("ok", "start", test)
 	}
 
 }

@@ -27,3 +27,4 @@ nbdist/
 
 
 *.class
+logs/
