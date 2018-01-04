@@ -20,7 +20,10 @@ $ sudo ln - s {任意ディレクトリ}/homepage.jar /etc/init.d/homepage
 $ sudo service homepage start
 ```
 
+* その他、必要に応じてchattr等を実行する(https://docs.spring.io/spring-boot/docs/2.0.0.M7/reference/htmlsingle/#deployment-initd-service-securing)
+
+
 参考
-https://docs.spring.io/spring-boot/docs/2.0.0.M7/reference/htmlsingle/#deployment-initd-service-securing
+
 https://qiita.com/AkihiroTakamura/items/e1be1a70428c57b10f8b
 http://progmemo.wp.xdomain.jp/archives/954
