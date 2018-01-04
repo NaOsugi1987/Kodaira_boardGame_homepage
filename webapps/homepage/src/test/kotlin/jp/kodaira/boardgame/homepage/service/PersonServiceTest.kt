@@ -23,7 +23,7 @@ class PersonServiceTest {
         println("start insertAndSelectTest")
 
         val name = "testPerson"
-        val person = personService.addPerson(name)
+        val person = personService.addPerson(name, "test")
         Assert.assertEquals("insert結果のテスト", name, person.name)
 
         val personList = personService.getPersonListLimitThousand()
