@@ -1,0 +1,24 @@
+<ons-navigator title="Navigator" var="activityNav">
+<div ng-controller="ActivityCtrl">
+<ons-toolbar>
+    <div class="center">過去の活動</div>
+</ons-toolbar>
+
+<ons-list>
+    <ons-list-item  modifier="chevron" 
+                    class="list-item-container" 
+                    ng-repeat="log in contents"
+                    ng-click="activityNav.pushPage(log.htmls, { animation : 'slide' } )">
+    <ons-row >
+        <ons-col>
+            <div class="name">
+                {{log.date}}
+            </div>
+            <div class="desc">
+                {{log.desc}}
+            </div>
+        </ons-col>
+        <ons-col width="40px"></ons-col>
+    </ons-row>
+</ons-list>
+
