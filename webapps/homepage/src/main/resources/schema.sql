@@ -3,3 +3,9 @@ CREATE TABLE IF NOT EXISTS person (
     ,name NVARCHAR UNIQUE NOT NULL
     ,encrypted_password CHAR(60) NOT NULL
 );
+CREATE TABLE IF NOT EXISTS schedule (
+    start_time TIMESTAMP PRIMARY KEY
+    ,end_time TIMESTAMP UNIQUE NOT NULL
+    ,summary NVARCHAR NOT NULL
+    ,location NVARCHAR NOT NULL
+);
