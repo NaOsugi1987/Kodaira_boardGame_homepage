@@ -74,7 +74,7 @@ class PersonControllerTest(@Autowired private val mvc: MockMvc) {
 
     @Test
     @WithMockUser
-    fun add() {
+    fun addTest() {
         val result = mvc.perform(get(PersonController.ADD_URI)
                 .param(PersonController.ADD_URI_PARAM, ADD_USER_NAME))
                 // 認証されている
@@ -97,7 +97,7 @@ class PersonControllerTest(@Autowired private val mvc: MockMvc) {
     inner class UpdateUser {
         @Test
         @WithMockUser(username = ADD_USER_NAME)
-        fun updatePassword() {
+        fun updatePasswordTest() {
             val result = mvc.perform(get(PersonController.UPDATE_PASSWORD_URI)
                     .param(PersonController.UPDATE_PASSWORD_URI_PARAM, "update_pass"))
                     // 認証されている
