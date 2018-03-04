@@ -1,34 +1,31 @@
 package jp.kodaira.boardgame.homepage.service
 
-import org.junit.Test
-import org.junit.runner.RunWith
+
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.junit4.SpringRunner
+import org.springframework.test.context.junit.jupiter.SpringExtension
 
-@RunWith(SpringRunner::class)
+
 @SpringBootTest
-class PersonServiceTest {
-
-    /**
-     * テストクラスはコンストラクターでDIできないのでlateinitを使う
-     * https://stackoverflow.com/questions/39178817/getting-rid-of-lateinit-when-converting-spring-java8-junit-test-to-kotlin?rq=1
-     */
-    @Autowired
-    private lateinit var personService: PersonService
+@ExtendWith(SpringExtension::class)
+class PersonServiceTest(@Autowired private var personService: PersonService) {
 
     @Test
     fun insertAndSelectTest() {
         println("start insertAndSelectTest")
-//
-//        val name = "testPerson"
-//        val person = personService.addPerson(name, "test")
-//        Assert.assertEquals("insert結果のテスト", name, person.name)
-//
-//        val personList = personService.getPersonListLimitThousand()
-//        Assert.assertFalse("空でないことをチェック", personList.isEmpty())
-//        val find = personList.find { it.name == name }
-//        Assert.assertEquals("insertしたデータをselect出来ているかチェック", name, find?.name)
+
+        val name = "testPerson"
+        val person = personService.addPerson(name, "test")
+        assertEquals(name, person.name, "insert結果のテスト")
+
+        val personList = personService.getPersonListLimitThousand()
+        assertFalse(personList.isEmpty(), "空でないことをチェック")
+        val find = personList.find { it.name == name }
+        assertEquals(name, find?.name, "insertしたデータをselect出来ているかチェック")
 
         println("end insertAndSelectTest")
     }

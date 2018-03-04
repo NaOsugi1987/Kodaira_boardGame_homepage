@@ -13,6 +13,7 @@ $ chmod o+r ./homepage.conf
 * ./homepage.confのJAVA_HOMEを設定する
 * ./homepage.confと./build/libs/homepage.jarとを任意のディレクトリに移動させる
 * /etc/init.dに移動させたjarファイルへのシンボリックリンクを生成する
+* .spring-boot-devtools.propertiesにカレンダーURLをとAPIKeyをセットしてユーザーフォルダ直下に配置する
 * serviceとして起動する
 
 ```
