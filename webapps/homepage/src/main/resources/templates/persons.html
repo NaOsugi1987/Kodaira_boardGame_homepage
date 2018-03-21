@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Public Page</title>
+    <title>Persons</title>
 </head>
 <body>
 <ul>
-    <li th:each="person : ${personList}">[[|id:${person.id}, name:${person.name}|]]</li>
+    <li th:each="person : ${persons}">[[|id:${person.id}, name:${person.name}|]]</li>
 </ul>
 </body>
 </html>

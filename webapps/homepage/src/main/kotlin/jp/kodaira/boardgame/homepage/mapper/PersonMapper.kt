@@ -1,10 +1,7 @@
 package jp.kodaira.boardgame.homepage.mapper
 
 import jp.kodaira.boardgame.homepage.domain.Person
-import org.apache.ibatis.annotations.Insert
-import org.apache.ibatis.annotations.Mapper
-import org.apache.ibatis.annotations.Options
-import org.apache.ibatis.annotations.Select
+import org.apache.ibatis.annotations.*
 
 @Mapper
 interface PersonMapper {
@@ -16,6 +13,15 @@ interface PersonMapper {
     """)
     @Options(useGeneratedKeys = true)
     fun insert(person: Person)
+
+    @Update("""
+        UPDATE person SET
+            encrypted_password = #{encryptedPassword}
+        WHERE
+            name = #{name}
+    """)
+    @Options(useGeneratedKeys = true)
+    fun update(person: Person)
 
     /**
      * idからpersonを探す。通常はこちらを使う

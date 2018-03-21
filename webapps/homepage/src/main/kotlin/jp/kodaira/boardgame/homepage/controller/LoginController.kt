@@ -5,6 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
 class LoginController {
-    @GetMapping("/login")
+    @GetMapping("/login.html")
     fun login() = "login"
 }

@@ -29,6 +29,15 @@ class PersonService(private val personMapper: PersonMapper,
     }
 
     /**
+     * personのpasswordを更新する。
+     */
+    fun updatePerson(name: String, password: String) {
+        val person = Person(name = name,
+                encryptedPassword = passwordEncoder.encode(password))
+        personMapper.update(person)
+    }
+
+    /**
      * personを1000個まで取得する
      */
     fun getPersonListLimitThousand() =
