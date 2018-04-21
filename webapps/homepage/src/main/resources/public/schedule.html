@@ -13,15 +13,15 @@
                     ng-click="scheduleNav.pushPage(shc.htmls, { animation : 'slide' } )">
         <ons-row>
             <ons-col width="80px" class="plan-left">
-                <div class="plan-date">{{shc.date}}</div>
-                <div class="plan-info">{{shc.hour}}</div>
+                <div class="plan-date">{{shc.yyyymmdd}}</div>
+                <div class="plan-info">{{shc.hhmm}}</div>
             </ons-col>
             <ons-col width="6px" class="plan-center" ng-style="{backgroundColor: '#3399ff'}">
             </ons-col>
             <ons-col class="plan-right">
-                <div class="plan-name">{{shc.name}}</div>
+                <div class="plan-name">{{shc.summary}}</div>
                 <div class="plan-info">
-                    <ons-icon icon="fa-map-marker"></ons-icon>{{shc.place}}
+                    <ons-icon icon="fa-map-marker"></ons-icon>{{shc.location}}
                 </div>
             </ons-col>
         </ons-row>
