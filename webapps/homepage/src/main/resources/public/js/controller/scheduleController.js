@@ -27,7 +27,7 @@ app.controller('ScheduleCtrl',function($scope){
           var sch = eventDates[i];
           var startTime = new Date(sch['startTime']);
           var endTime = new Date(sch['endTime']);
-          sch['yyyymmdd'] = (startTime.getYear()+1900) + "/" + (startTime.getMonth()+1) + "/" + startTime.getDate();
+          sch['yyyymmdd'] = (startTime.getFullYear()) + "/" + (startTime.getMonth()+1) + "/" + startTime.getDate();
           sch['hhmm'] = startTime.getHours() + ":" + startTime.getMinutes() + "~" + endTime.getHours() + ":" + endTime.getMinutes();
           eventDates[i] = sch;
       }
