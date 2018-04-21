@@ -19,16 +19,24 @@ app.controller('ScheduleCtrl',function($scope){
     {"startTime":"2019-03-02T13:30:00+09:00","endTime":"2019-03-02T15:30:00+09:00","summary":"みんなで遊ぼうドイツゲーム","location":"小平市中央公民館"}
     ];
 
-    for (i = 0; i < eventDates.length; i++) {
-        var sch = eventDates[i];
-        var startTime = new Date(sch['startTime']);
-        var endTime = new Date(sch['endTime']);
-        sch['yyyymmdd'] = (startTime.getYear()+1900) + "/" + (startTime.getMonth()+1) + "/" + startTime.getDate();
-        sch['hhmm'] = startTime.getHours() + ":" + startTime.getMinutes() + "~" + endTime.getHours() + ":" + endTime.getMinutes();
-        eventDates[i] = sch;
-    }
 
-    $scope.eventDates = eventDates;
+    $.ajax({
+      url: "/schedule",
+      async: false
+    }).done(function(data) {
+      eventDates = data;
+          //eventDates = [];
 
+      for (i = 0; i < eventDates.length; i++) {
+          var sch = eventDates[i];
+          var startTime = new Date(sch['startTime']);
+          var endTime = new Date(sch['endTime']);
+          sch['yyyymmdd'] = (startTime.getYear()+1900) + "/" + (startTime.getMonth()+1) + "/" + startTime.getDate();
+          sch['hhmm'] = startTime.getHours() + ":" + startTime.getMinutes() + "~" + endTime.getHours() + ":" + endTime.getMinutes();
+          eventDates[i] = sch;
+      }
+
+      $scope.eventDates = eventDates;
+    });
 
 }) ;
