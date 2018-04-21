@@ -41,9 +41,10 @@ class PersonController(private val personService: PersonService) {
     /**
      * ユーザーを追加する
      */
-    @GetMapping(ADD_URI)
+    @GetMapping("/private/person/add")
     fun add(model: Model,
-            @RequestParam(ADD_URI_PARAM) name: String = ""): String {
+            @RequestParam(name = ADD_URI_PARAM,
+                    required = true) name: String): String {
         val newPerson = personService.addPerson(name, "test")
         logger.info("addPerson. newPerson:$newPerson")
         model.addAttribute(PERSON_VIEW_MODEL_KEY_ID, newPerson.id)
@@ -57,7 +58,8 @@ class PersonController(private val personService: PersonService) {
     @GetMapping(UPDATE_PASSWORD_URI)
     fun updatePassword(model: Model,
                        principal: Principal,
-                       @RequestParam(UPDATE_PASSWORD_URI_PARAM) pass: String = ""): String {
+                       @RequestParam(name = UPDATE_PASSWORD_URI_PARAM,
+                               required = true) pass: String): String {
         logger.info("updatePassword.")
         personService.updatePerson(principal.name, pass)
         model.addAttribute(PERSON_VIEW_MODEL_KEY_ID, 0)
